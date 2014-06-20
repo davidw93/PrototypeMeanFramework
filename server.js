@@ -10,6 +10,9 @@ var db          = mongoose.connect(config.database.Development.db, function(err)
         console.error("Error: " + err.message);
         return console.error("Couldn't connect to MongoDB");
     }
-});
 
-console.log(config);
+    app = require("./server/config/bootstrap")(db);
+    app.listen(config.server.port, config.server.hostname);
+
+    console.log("Server now listening on " + config.server.port);
+});
