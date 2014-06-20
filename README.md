@@ -2,12 +2,13 @@ Because this isn't really a proper project I'm just going to use this readme to
 list my todo list.
 
 * ~~Obtain beer~~
-* ~~Improve Route Bootstrapping so that routes don't have to be defined~~ Done
-  to a basic degree so far
-* Improve the way controller files are layed out. Preferably encapsultion in an
+* ~~Improve Route Bootstrapping so that routes don't have to be defined~~ _Done
+  to a basic degree so far_
+* ~~Improve the way controller files are layed out. Preferably encapsultion in an
   object literal with defined functions for each route. Possible use of conflate
   during the bootstrapping process to load the file methods and attributes in a
-  prototype?
+  prototype?~~ - _realised that prototype'd methods don't fit in with the design
+  I have in mind_
 * Write model code such that they act the same way as controllers
 * Expand the usage of the framework's registry so that scripts within the
   framework can use it natively.
