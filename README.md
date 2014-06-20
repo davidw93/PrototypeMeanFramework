@@ -9,7 +9,8 @@ list my todo list.
   during the bootstrapping process to load the file methods and attributes in a
   prototype?~~ - _realised that prototype'd methods don't fit in with the design
   I have in mind_
-* Write model code such that they act the same way as controllers
+* ~~Write model code such that they act the same way as controllers~~ -
+  _#mongoose_
 * ~~Expand the usage of the framework's registry so that scripts within the
   framework can use it natively.~~ - _Used global object, nasty, nasty, nasty_
 * Work in some form of View system and rendering system and hook that into
