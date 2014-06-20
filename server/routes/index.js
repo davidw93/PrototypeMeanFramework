@@ -1,8 +1,9 @@
 "use strict";
 
 module.exports = function(app) {
-    var index = require("../controllers/index");
-
-    app.route("/")
-        .get(index.render);
+    //Wildcard get requests for all routes to use custom logic to load
+    //appropriate controllers
+    app.get("/*", function(req, res) {
+        
+    });
 };

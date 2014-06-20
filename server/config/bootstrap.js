@@ -8,6 +8,12 @@ framework.app("Prototype Framework", {});
 
 module.exports = function(database) {
 
+    function loadControllers() {
+        var controllers = [];
+    }
+
+    loadControllers();
+
     function loadBootstrapModels() {
         require("../../system/lib/util").walk(appPath + "/server", "model", null, function(path) {
             require(path);
