@@ -156,7 +156,7 @@ exports.registry = function() {
         if(visited == null) {
             visited = [];
         }
-        isOverridden = overrides != null;
+        isOverriden = overrides != null;
 
         //Check for circular dependencies
         if(haveVisited(visited, name)) {
@@ -175,7 +175,7 @@ exports.registry = function() {
         }
 
         //Use the factory we have already created
-        if((factory.instance != null) && !isOverridden) {
+        if((factory.instance != null) && !isOverriden) {
             return factory.instance;
         }
 
@@ -189,7 +189,7 @@ exports.registry = function() {
         });
 
         instance = factory.func.apply(factory, dependencies);
-        if(!isOverridden) {
+        if(!isOverriden) {
             factory.instance = instance;
         }
         return instance;

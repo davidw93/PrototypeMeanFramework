@@ -9,9 +9,9 @@ framework.app("Prototype Framework", {});
 module.exports = function(database) {
 
     function loadControllers() {
-        var controllers = [];
+        var controllerListObject = require("../controllers");
+        framework.register("controllers", controllerListObject);
     }
-
     loadControllers();
 
     function loadBootstrapModels() {
@@ -19,7 +19,6 @@ module.exports = function(database) {
             require(path);
         });
     }
-
     loadBootstrapModels();
 
     function loadBootstrapDependencies() {
@@ -32,8 +31,10 @@ module.exports = function(database) {
             return app;
         });
     }
+    loadBootstrapDependencies();
 
     var app = express();
     require("./express")(app, database);
+
     return app;
 };
