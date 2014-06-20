@@ -1,7 +1,7 @@
 Because this isn't really a proper project I'm just going to use this readme to
 list my todo list.
 
-* Obtain beer
+* ~~Obtain beer~~
 * Improve Route Bootstrapping so that routes don't have to be defined
 * Improve the way controller files are layed out. Preferably encapsultion in an
   object literal with defined functions for each route. Possible use of conflate
