@@ -17,8 +17,13 @@ module.exports = function(database) {
     loadBootstrapModels();
 
     function loadBootstrapDependencies() {
+        //Register our database dependency
         framework.register("database", {
             connection: database
+        });
+
+        framework.register("app", function() {
+            return app;
         });
     }
 

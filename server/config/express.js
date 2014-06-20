@@ -3,7 +3,8 @@
 var express     = require("express"),
     config      = require("../config"),
     appPath     = process.cwd(),
-    fs          = require("fs");
+    fs          = require("fs"),
+    util        = require("../../system/lib/util");
 
 module.exports = function(app, database) {
     app.set("showStackError", true);
@@ -15,4 +16,13 @@ module.exports = function(app, database) {
 
     app.set("view engine", "html");
     app.enable("jsonp callback");
+
+    function bootstrapRoutes() {
+        util.walk(appPath + "/server", "route", "middlewares", function(path) {
+            require(path)(app);
+        });
+    };
+
+    //Load all the routes
+    bootstrapRoutes();
 }
