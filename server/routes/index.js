@@ -1,6 +1,5 @@
 "use strict";
 
-var framework   = require("../../system/framework");
 var controllers = framework.load("controllers");
 
 function loadControllerIndex(controller, req, res) {

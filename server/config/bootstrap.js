@@ -3,7 +3,6 @@
 var express = require("express"),
     appPath = process.cwd();
 
-var framework = require("../../system/framework");
 framework.app("Prototype Framework", {});
 
 module.exports = function(database) {

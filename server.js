@@ -1,5 +1,6 @@
 var mongoose    = require("mongoose");
 
+global.framework= require("./system/framework");
 var config      = require("./server/config"); //load the server-only config files
 var app         = {};
 
